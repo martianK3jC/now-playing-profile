@@ -1,5 +1,6 @@
 import { NowRequest, NowResponse } from "@vercel/node";
-import { renderToString, ReactElement } from "react-dom/server";
+import { renderToString } from "react-dom/server";
+import { ReactElement } from "react";
 import { decode } from "querystring";
 import { Player } from "../components/NowPlaying";
 import { nowPlaying } from "../utils/spotify";
@@ -40,7 +41,6 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
   const { duration_ms: duration, name: track } = item;
   const { images = [] } = item.album || {};
-
   const cover = images[images.length - 1]?.url;
   let coverImg: string | undefined = undefined;
 
