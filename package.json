@@ -1,15 +1,17 @@
 {
   "name": "now-playing-profile",
   "private": true,
-  "type": "module",
   "version": "1.0.0",
   "description": "Github profile",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "express": "^5.1.0",
     "faunadb": "^2.14.2",
     "isomorphic-unfetch": "^3.0.0",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.6.7",
     "open": "^10.2.0",
     "querystring": "^0.2.1",
     "react": "^16.13.1",
