@@ -5,7 +5,7 @@
   "description": "Github profile",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "express": "^5.1.0",
