@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2020",                   // Modern JS target
-    "module": "ESNext",                   // Keep ES modules for Node
-    "moduleResolution": "Node",
-    "jsx": "react-jsx",                   // or "react" if using React 16
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "strict": true,
-    "outDir": "dist"                       // optional, for compiled output
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "lib": ["DOM", "ESNext"],
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "include": ["api/**/*", "components/**/*", "utils/**/*"]
+  "include": ["api/**/*", "components/**/*", "utils/**/*", "types/**/*"]
 }
