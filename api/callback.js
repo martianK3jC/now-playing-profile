@@ -2,9 +2,8 @@ const fetch = require('node-fetch');
 
 module.exports = async (req, res) => {
   const code = req.query.code;
-  // Use your production URL here
-  const redirect_uri = 'https://YOUR_PRODUCTION_URL.vercel.app/api/callback';
-
+  const redirect_uri = 'https://now-playing-profile-lac.vercel.app/api/callback';
+  
   const response = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
@@ -17,7 +16,7 @@ module.exports = async (req, res) => {
       redirect_uri: redirect_uri
     })
   });
-
+  
   const data = await response.json();
   
   if (data.refresh_token) {
