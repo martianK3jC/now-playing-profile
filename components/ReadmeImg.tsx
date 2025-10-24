@@ -9,6 +9,7 @@ const ReadmeImg = ({ width, height, children }) => {
       viewBox={`0 0 ${width} ${height}`}
       xmlns="http://www.w3.org/2000/svg"
     >
+      <rect width={width} height={height} fill="white" rx="4" />
       <foreignObject width={width} height={height}>
         <div {...{ xmlns: "http://www.w3.org/1999/xhtml" }}>
           <style>{`
